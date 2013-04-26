@@ -1,0 +1,4 @@
+Bounty Hunter 0.1.0 (released 2013-08-21)
+
+- Initial release
+

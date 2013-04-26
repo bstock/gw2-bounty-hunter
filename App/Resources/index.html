@@ -1,0 +1,57 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta charset="UTF-8">
+
+    <title></title>
+
+    <link rel="stylesheet" type="text/css" href="style/meyerReset.css">
+    <link rel="stylesheet" type="text/css" href="style/mainWindow.css">
+
+    <script type="text/javascript" src="scripts/jquery-1.9.1.js"></script>
+    <script type="text/javascript" src="scripts/app.js"></script>
+    <script type="text/javascript" src="scripts/mainWindow.js"></script>
+
+  </head>
+
+  <body>
+
+    <div id="topBar">
+      Bounty-Hunter
+      <span id="aboutBtn"></span>
+      <span id="collapseBtn"></span>
+      <span id="closeBtn"></span>
+    </div>
+
+    <div id="contentContainer">
+    
+      <div id="topSection">
+
+        <button id="startTimerBtn" type="button" value="startBounty">Start Bounty</button>
+        <div id="timerProgress">
+          <div id="timerTxt" class="textShadow"></div>
+          <div id="timerProgressFill"></div>
+        </div>
+
+        <div id="counters" class="textShadow">
+          <span id="foundCounter">Found: <span id="foundTotal">0</span> / <span id="bountyTotal">0</span></span> |
+          <span id="killedCounter">Killed: <span id="killedTotal">0</span></span></div>        
+      </div>
+
+      <hr class="divider clearBoth"></hr>
+
+      <div id="mainSection">
+        <div id="bountyFilter">
+          <input type="radio" id="showAll" name="bountySelector" value="all" checked="checked" />
+          <label for="showAll" class="left">All</label>
+          <input type="radio" id="showSelected" name="bountySelector" />
+          <label for="showSelected" class="middle">Selected</label>
+          <input type="radio" id="showBounties" name="bountySelector" />
+          <label for="showBounties" class="right">Bounties</label>
+        </div>
+      </div>
+
+    </div>
+
+  </body>
+</html>

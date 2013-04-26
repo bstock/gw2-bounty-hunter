@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<ti:app xmlns:ti='http://ti.appcelerator.org'>
+<id>com.gw2.bountyhunter</id>
+<name>BountyHunter</name>
+<version>0.1.0</version>
+<publisher>SolidCypher</publisher>
+<url>http://www.guildwars2.com</url>
+<icon>skull_bw.png</icon>
+<copyright>SolidCypher</copyright>
+  <window>
+    <id>initial</id>
+    <title>BountyHunter</title>
+    <url>app://index.html</url>
+    <width>345</width>
+    <max-width>400</max-width>
+    <min-width>345</min-width>
+    <height>655</height>
+    <max-height>655</max-height>
+    <min-height>65</min-height>
+    <fullscreen>false</fullscreen>
+    <resizable>false</resizable>
+    <chrome scrollbars="false">false</chrome>
+    <maximizable>false</maximizable>
+    <minimizable>true</minimizable>
+    <closeable>true</closeable>
+    <transparent-background>true</transparent-background>
+  </window>
+</ti:app>

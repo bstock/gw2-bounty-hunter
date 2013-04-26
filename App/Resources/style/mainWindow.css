@@ -1,0 +1,349 @@
+
+body {
+  /* background-color: rgb(120, 120, 120); */
+  font-family: Arial, sans-serif;
+  font-size: 10px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.divider {
+  border-width: 1px 0 0 0;
+  border-color: #CECECE;
+  border-style: dashed;
+  margin: 2px 0 2px 0;
+  padding: 0;
+}
+
+#topBar {
+  position: relative;
+  width:258px;
+  height: 16px;
+  padding: 3px;
+  line-height: 16px;
+  text-align: center;
+  background-color: rgb(220,220,220);
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  -webkit-user-select: none;
+  cursor: move;
+}
+
+#aboutBtn,
+#collapseBtn,
+#closeBtn {
+  position: absolute;
+  background-image: url(../imgs/ui-icons_004276_256x240.png);
+  background-repeat: no-repeat;
+  height: 16px;
+  width: 16px;
+  float: right;
+  cursor: pointer;
+}
+
+#aboutBtn {
+  right: 37px;
+  background-position: -48px -145px;
+}
+
+#collapseBtn {
+  right: 21px;
+  background-position: -64px -192px;
+}
+
+#closeBtn {
+  right: 5px;
+  background-position: -32px -192px;
+}
+
+#startTimerBtn {
+  width: 80px;
+}
+
+#contentContainer {
+  width: 250px;
+  border: 1px solid rgb(220,220,220);
+  padding: 6px;
+  /* 'fix' to make row-hover work correctly with transparent background */
+  background-color: rgba(100, 100, 100, 0.01);
+}
+
+#topSection {
+  float: left;
+}
+
+#startTimerBtn {
+  font-size: 10px;
+  float: left;
+}
+
+#timerProgress {
+  border-radius: 4px;
+  border: 1px solid #FEFEFE;
+  width: 160px;
+  height: 16px;
+  position: relative;
+  float: left;
+  margin-left: 5px;
+}
+
+#timerTxt {
+  height: 100%;
+  width: 100%;
+  line-height: 16px;
+  text-align: center;
+  color: white;
+  font-weight: bold;
+  position: absolute;
+  z-index: 12;
+}
+
+#timerProgressFill {
+  width: 0;
+  height: 100%;
+  background-color: #878787;
+  -webkit-box-shadow: 0 5px 5px rgba(180,180,180,0.5) inset;
+  border-radius: 4px;
+  position: absolute;
+  z-index: 10;
+}
+
+#counters {
+  clear: both;
+  width: 136px;
+  margin: auto;
+  color: white;
+  font-weight: bold;
+  font-size: 11px;
+  text-align: center;
+  padding: 4px 0 4px 0;
+}
+
+#foundCounter {
+  color: rgb(234,191,21);
+}
+
+#killedCounter {
+  color: rgb(119,188,0);
+}
+
+#bountyFilter {
+  clear: both;
+  width: 160px;
+  margin: auto;
+  padding: 4px 0 4px 0;
+}
+
+#bountyFilter input[type="radio"] {
+  display: none;
+}
+
+#bountyFilter label {
+  display: inline-block;
+  background-color: white;
+  width: 45px;
+  margin-right: -3px;
+  padding: 3px;
+  text-align: center;
+  border-color: rgb(68,68,68);
+  border-style: solid;
+  cursor: pointer;
+  -webkit-box-shadow: 0 -5px 5px rgba(110,110,110,0.5) inset;
+}
+
+#bountyFilter .left {
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+  border-width: 1px 0 1px 1px;
+}
+
+#bountyFilter .middle {
+  border-width: 1px 1px 1px 1px;
+}
+
+#bountyFilter .right {
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+  border-width: 1px 1px 1px 0;
+}
+
+#bountyFilter input[type="radio"]:checked + label {
+  background-color: rgb(195,224,255);
+}
+
+#mainSection {
+}
+
+.bountyRow {
+  color: white;
+  padding-left: 2px;
+  cursor: pointer;
+  border-radius: 3px;
+  line-height: 23px;
+  -webkit-transition: background .3s ease-out;
+}
+
+.bountyRow:hover {
+  background: rgba(72,132,206,0.8);
+}
+
+.isSearching {
+  background-color: transparent;
+}
+
+.isFound {
+  background-color: rgba(234,191,21,0.4);
+}
+
+.isBounty {
+  background-color: rgba(219,42,39,0.4);
+}
+
+.isKilled {
+  background-color: rgba(119,188,0,0.4);
+}
+
+.isFailed {
+  background-color: rgba(100,100,100,0.8);
+}
+
+.textShadow {
+  text-shadow: -1px -1px 0 #343434, 1px -1px 0 #343434, -1px 1px 0 #343434, 1px 1px 0 #343434;
+}
+
+.bountySelect {
+  height: 20px;
+  margin: 0;
+  padding-left: 20px;
+  -webkit-appearance: none;
+  -webkit-transition: opacity .3s ease-out;
+  background-image: url(../imgs/custom-checkbox.png);
+  background-repeat:no-repeat;
+  background-position: 0 0;
+  vertical-align:middle;
+  cursor:pointer;
+}
+
+.bountySelect:checked {
+  background-position: 0 -20px;
+}
+
+.bountyName {
+  margin-left: 3px;
+  width: 145px;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: bold;
+  color: white;
+}
+
+.bountyName:hover {
+  /* text-decoration: underline; */
+}
+
+.bountyState {
+  color: #121212;
+  width: 70px;
+  line-height: 16px;
+  list-style-type: none;
+  display: inline-block;
+  margin: 0;
+  background-color: #fafafa;
+  border: 1px solid #cacece;
+  -webkit-box-shadow: 0 -3px 3px rgba(0,0,0,0.05) inset;
+  padding: 1px 1px 1px 3px;
+  border-radius: 6px;
+  -webkit-transition-property: background-color,color,border-color;
+  -webkit-transition-duration: .3s;
+  -webkit-transition-timing-function: ease-out;
+}
+
+.bountyState:hover {
+  background-color: #efefef;
+  border-color: #4C4C4C;
+  color: #B70000;
+}
+
+.bountyStateInner {
+  position: relative;
+}
+
+.menuIcon {
+  background-image: url(../imgs/ui-icons_004276_256x240.png);
+  background-position: -32px 0px;
+  background-repeat: no-repeat;
+  height: 16px;
+  width: 16px;
+  float: right;
+}
+
+.stateMenuContainer {
+  position: absolute;
+  width: 80px;
+  height: 98px;
+  margin-top: -49px; /* half of height */
+  top: 50%;
+  margin-left: 10px; /* width of triangle + right-hand padding on container <li> */
+  left: -600px;
+}
+
+.bountyState:hover .stateMenuContainer {
+  left: 100%;
+}
+
+.stateMenu {
+  width: 80px;
+  height: 98px;  
+  position: relative;
+  opacity: 0;
+  border-radius: 6px;
+  border: 1px solid #9e9e9e;
+  -webkit-box-shadow: 6px 0px 12px rgba(0,0,0,.15);
+  background-color: #EFEFEF;
+  margin-left: -20px;
+  -webkit-transition-property: opacity,margin-left;
+  -webkit-transition-duration: .3s;
+  -webkit-transition-timing-function: ease-out;
+}
+
+.bountyState:hover .stateMenu {
+  opacity: 1;
+  margin-left: -1px;
+}
+
+.menuTriangle {
+  width: 0;
+  height: 0;
+  position: absolute;
+  border-right: 8px solid #EFEFEF;
+  border-top: 8px solid transparent;
+  border-bottom: 8px solid transparent;
+  margin-top: -8px;
+  margin-left: -8px;
+  top: 50%;
+}
+
+.stateMenu ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.stateMenu li {
+  margin: 2px;
+  padding: 2px;
+  line-height: normal;
+  color: #121212;
+  border-radius: 3px;
+  -webkit-transition: background .2s ease-out;
+}
+
+.stateMenu li:hover {
+  background: rgba(72,132,206,0.5);
+}
+
+.clearBoth {
+  clear: both;
+}
