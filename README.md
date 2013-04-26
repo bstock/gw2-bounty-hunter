@@ -7,6 +7,10 @@ by ArenaNet regarding 3rd party progams, i.e:
 * Has no awareness of, or interaction with the Guild Wars 2 game client.
 * Does not provide an advantage against other players.
 
+Please send any suggestions, feedback, etc to GW2AppliedDevelopmentLab+bh [AT] gmail [DOT] com.
+
+Feel free to ping me in-game: **SolidCypher.8214**.
+
 ## Demo
 
 A short video showing it in action can be seen here: http://youtu.be/QrJlxOVAchg.
