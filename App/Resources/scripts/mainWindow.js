@@ -258,6 +258,24 @@ var MainWindow = function() {
     $("#"+id+"-state .stateTxt").text(newState);
   };
 
+  var userNamesVisible = false;
+
+  o.toggleUserNames = function() {
+    if (!userNamesVisible) {
+      $("#bigBoy").css("overflow", "hidden");
+      $(".bountyRow").css("width", "355px");
+      $(".userName").show(0);
+      $("#bigBoy").animate({ width:"370px" }, 500);
+    } else {
+      $("#bigBoy").animate({ width:"262px" }, 500, function() {
+        $(".userName").hide(0);
+        $(".bountyRow").css("width", "100%");
+        $("#bigBoy").css("overflow", "visible");
+      });
+    }
+    userNamesVisible = !userNamesVisible;
+  };
+
   var aboutWindow = null;
 
   o.openAboutWindow = function() {
@@ -303,9 +321,11 @@ $(document).ready(function() {
     var win = Ti.UI.getMainWindow();
     //  Commented out for the moment as for whatever reason when transpararent-background = true, attempting to
     //  use a context menu consistently crashes the app. Added a button to open about window instead.
-    //var contextMenu = Ti.UI.createMenu();
-    //contextMenu.addItem("About", function() { MainWindow.openAboutWindow(); });
-    //win.setContextMenu(contextMenu);
+    var contextMenu = Ti.UI.createMenu();
+    contextMenu.addCheckItem("Show user names", function() { MainWindow.toggleUserNames(); });
+    contextMenu.addSeparatorItem();
+    contextMenu.addItem("About", function() { MainWindow.openAboutWindow(); });
+    win.setContextMenu(contextMenu);
     win.setTopMost(true);
   }
   $("#bountyTotal").text(Bounties.totalBounties);
@@ -338,7 +358,8 @@ $(document).ready(function() {
               ])
             ])
           ])
-        ])
+        ]),
+        b.INPUT({ id:bid+'-userName', type:'text', 'class':'userName' })
       ]));
   }
   
